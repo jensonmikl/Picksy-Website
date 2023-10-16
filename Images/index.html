@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PICKSY</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Libre+Baskerville&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;1,600;1,900&display=swap");
+
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Kumar One Outline", cursive;
+        font-family: "Libre Baskerville", serif;
+        font-family: "Prompt", sans-serif;
+        height: 100vh;
+        width: 100%;
+        padding: 1rem;
+      }
+      .head {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid;
+        padding: 20px;
+        box-shadow: 5px 10px 8px #888888;
+      }
+      .nav {
+        width: 30%;
+        
+        background-image: url(./3bar.png);
+      }
+      .login {
+        height: 1.5rem;
+      }
+      input {
+        padding: 0.5rem 10rem;
+      }
+      .search2 {
+        width: 60%;
+      }
+      .slide {
+        height: 50rem;
+        width: 100%;
+        background-image: url(pexels-photo-3167310.jpeg);
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 1%;
+      }
+      .order {
+        width: 1.5rem;
+        height: 1.55rem;
+      }
+      .slide2 {
+        position: relative;
+        font-size: large;
+        background-color: rgb(247, 252, 252);
+        border: none;
+
+        left: 10rem;
+        top: 40rem;
+        padding: 1rem;
+        border-radius: 30%;
+      }
+      .box {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 2rem;
+        gap: 10%;
+        background-color: rgb(243, 243, 243);
+      }
+      /* .cart-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      } */
+      .top {
+        padding: 3rem;
+        position: relative;
+        left: 45%;
+      }
+      .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        overflow: auto;
+        /* overflow: visible ; */
+        /* background-color: antiquewhite; */
+      }
+      .bottom {
+        height: 25rem;
+        background-color: rgb(245, 246, 248);
+      }
+      .items-secound {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        gap: 5rem;
+        border: 3px solid beige;
+        object-fit: fill;
+        
+      }
+      .box-2 {
+        padding: 5rem;
+        background-color: rgb(243, 243, 236);
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .offer-list {
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 25rem;
+        width: 100%;
+        background-color: rgb(244, 241, 241);
+        border-radius: 20px;
+      }
+
+      button {
+        font-size: large;
+        background-color: rgb(247, 252, 252);
+        border: none;
+        padding: 1rem;
+        border-radius: 30%;
+      }
+      .offer-1{
+        padding: 3rem;
+         background-image: url(sample3.jpg);
+         border-radius: 20px;
+         object-fit: cover;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .offer-2{
+        padding: 3rem;
+        width: 50%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(sample4.jpg);
+        background-position: 100%;
+        
+        justify-content: space-around;
+      }
+      h4{
+        background-color: azure;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .items-secound{
+        width: 90%;
+      }
+      .product img{
+        height: 15rem;
+        width: 10rem;
+       padding-right: 10px;
+        
+      }
+      .product{
+        height: 20rem;
+        width: 20rem;
+        background-color: white;
+        padding: 15px;
+        
+
+      }
+      .foot1{
+        background-image: url(shipping.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+        display: flex;
+        padding: 1rem;
+        border-radius: 20px;
+        
+      }
+      .foot{
+       
+        
+        height: 15rem;
+        display: flex;
+        border-radius: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       background-position: 100%;
+       
+      }
+      .last{
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+      .logo{
+        height: 3rem;
+        width: 3rem;
+        filter: grayscale();
+        
+        
+      }
+     ul {
+        list-style-type: none;
+        margin: 0%;
+        padding: 0%;
+        /* background-color: rgb(243, 243, 242); */
+      }
+      li,
+      a {
+        /* float: left; */
+        padding: 1rem;
+        color: black;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+      }
+      .dd {
+        display: inline-block;
+      }
+      .dc {
+        display: none;
+        position: absolute;
+        background-color: rgb(249, 249, 252);
+        min-width: 100px;
+        /* box-shadow: 5px 2px 5px 9px rgb(242, 241, 245); */
+        z-index: 1;
+      }
+      .dc a {
+        color: rgb(11, 11, 11);
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+      .dd:hover .dc {
+        display: block;
+      }
+      .bar{
+        height: 3rem;
+        padding-top: 5px;
+      }
+      .title{
+        font-weight: bold;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="dd">
+          <ul>
+          <img src="3bar.png" alt="" class="bar">
+          <div class="dc"><li><a href="">Vegetables</a></li>
+          <li><a href="">Organic</a></li>
+          <li><a href="">Snacks & Beverages</a></li>
+          <li><a href="">Fish & Meat</a></li>
+          <li><a href="">Dairy</a></li>
+          <li><a href="">Bakery & Pastry</a></li></div>
+        </ul>
+      </div>
+      <div class="title">PICKSY.</div>
+      <div class="search">
+        <label for="search" class="search2"
+          ><input
+            type="text"
+            placeholder="what are you looking for.."
+            name="search"
+        /></label>
+        
+      </div>
+      <div class="login1">
+        <img src="login.png" alt="" class="login" />
+      </div>
+    </div>
+    <div class="slide">
+      <button type="submit" class="slide2">
+        Order Now <img src="order.png"  alt="" class="order" />
+      </button>
+    </div>
+
+    <div class="category">
+      <div class="top">
+        <h2>Shop by Category</h2>
+
+        <pre>Visit our shop to see amazing products</pre>
+      </div>
+      <div class="bottom">
+        <div class="items">
+          <div class="item-1">
+            <img src="organics/8d221de6-fae8-4cf1-8913-5f44fe72a591_vegetables.webp" alt="vegetables" /><br />
+            <h6>vegetables</h6>
+          </div>
+          <div class="item-2">
+            <img src="organics/43c2927b-c72d-4b54-93af-bf77aea7afdf_fish+&+meat.webp" alt="Fish&Meat" /><br />
+            <h6>Fish&Meat</h6>
+          </div>
+          <div class="item-3">
+            <img src="organics/027828c5-47af-464f-b0d0-542cfe75d545_organic.webp" alt="Organic" /><br />
+            <h6>Organic</h6>
+          </div>
+          <div class="item-4">
+            <img src="organics/55fc19b2-828e-4b52-bf0d-2702e9570b30_Snacks.webp" alt="snaks&beverages" /><br />
+            <h6>snaks&beverages</h6>
+          </div>
+          <div class="item-5">
+            <img src="organics/7cf639c3-f3c1-427a-baa6-a04c100164d6_Dairy.webp" alt="dairy" /><br />
+            <h6>dairy</h6>
+          </div>
+          <div class="item-6">
+            <img src="organics/0552eea7-284a-44ae-ad0b-2526d2ec6e61_Bread.webp" alt="Bekery&Pastry" /><br />
+            <h6>Bekery&Pastry</h6>
+          </div>
+        </div>
+        <img src="" alt="" />
+        <h2></h2>
+        <h6></h6>
+      </div>
+    </div>
+    <div class="box-2">
+      <h1>Featured Product</h1>
+      <div class="items-secound">
+        <div class="product">
+          <img src="Featured Product/fresh-veg-6-update-1.webp" alt="" />
+          <h2>$1.50</h2>
+          <h6>Radish 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/fresh-veg-1-update-1.webp" alt="" />
+          <h2>$1.95</h2>
+          <h6>Broccoli 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/pack-veg-5-update-1.webp" alt="" />
+          <h2>$0.95</h2>
+          <h6>Packed Edamame 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/Chocolates--9-update-1.webp" alt="" />
+          <h2>$2.95</h2>
+          <h6>Snikers Mini 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/fresh-veg-10-update-1.webp" alt="" />
+          <h2>$0.45</h2>
+          <h6>potato 1000g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/Coffee--9-update-1.webp" alt="" />
+          <h2>$3.95</h2>
+          <h6>Lavazza Ground Coffee 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/crisp--3-update-1.webp" alt="" />
+          <h2>$1.95</h2>
+          <h6>Pringles 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/herb-veg-3-update-1.webp" alt="" />
+          <h2>$1.50</h2>
+          <h6>Tarragon Mint Leaves 100g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/fresh-veg-5-update-1.webp" alt="" />
+          <h2>$1.25</h2>
+          <h6>Green Beans 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Featured Product/Chocolates-5-update-1.webp" alt="" />
+          <h2>$0.45</h2>
+          <h6>Twix 500g</h6>
+        </div>
+      </div>
+    </div>
+
+        <div class="box-2">
+      <h1>Trending Product</h1>
+      <div class="items-secound">
+        <div class="product">
+          <img src="Trending Product/fresh-veg-6-update-1 (1).webp" alt="" />
+          <h2>$1.50</h2>
+          <h6>Radish 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/pack-veg-2-update-1.webp" alt="" />
+          <h2>$1.25</h2>
+          <h6>Cherry Tomato 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/fresh-veg-7-update-1.webp" alt="" />
+          <h2>$0.98</h2>
+          <h6>Sweet Corn 250g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/Chocolates--4-update-1.webp" alt="" />
+          <h2>$35.00</h2>
+          <h6>Snikers 50g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/pack-veg-2-update-1.webp" alt="" />
+          <h2>$2.25</h2>
+          <h6>Sprouts Diced Pepper 200g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/Coffee-7-update-1.webp" alt="" />
+          <h2>$3.25</h2>
+          <h6>Lavazza Ground Coffee 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/fresh-veg-10-update-1.webp" alt="" />
+          <h2>$1.95</h2>
+          <h6>Potato 500g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/Chocolates-6-update-1.webp" alt="" />
+          <h2>$1.50</h2>
+          <h6>Twix T 100g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/Chocolates-7-update-1.webp" alt="" />
+          <h2>$1.25</h2>
+          <h6>MM lovers 200g</h6>
+        </div>
+        <div class="product">
+          <img src="Trending Product/pack-veg-9-update-1.webp" alt="" />
+          <h2>$0.45</h2>
+          <h6>Mixing Vegtables 500g</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+        <div class="cart-1">
+          <img src="How it Works/b84fb23d-e3b2-4f2b-9c35-cb49680fb817_feature-1.svg" alt="" class="free" />
+          <h3>Select Your Order</h3>
+    
+          <pre>It is a long established fact that 
+                a reader will be disdracted
+          </pre>
+        </div>
+        <div class="cart-2">
+          <img src="How it Works/54a77757-4775-4d19-8c61-861a882a60a9_feature-2.svg" alt="" class="refund" />
+          <h3>Preparing Your Card Items</h3>
+  
+          <pre>It is a long established fact that 
+               a reader will be disdracted
+
+          </pre>
+        </div>
+        <div class="cart-3">
+          <img src="How it Works/7c1f50e6-575e-442f-8445-1d19f845ee41_feature-3.svg" alt="" class="secure" />
+          <h3>Delivery T Your Home </h3>
+          <pre>It is a long established fact that 
+               a reader will be disdract</pre>
+        </div>
+        
+        <div class="cart-4">
+          <img src="" alt="" class="customer" />
+          <h3></h3>
+          <pre></pre>
+        </div>
+      </div>
+  
+    <div class="box-2">
+        <h1>Latest Product</h1>
+        <div class="items-secound">
+          <div class="product">
+            <img src="Latest Product/WholeChicken.webp
+            " alt="" />
+            <h2>$3.55</h2>
+            <h6>Whole Chicken 800g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/vealMeat.webp" alt="" />
+            <h2>$8.95</h2>
+            <h6>Beef T Bone 850g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/SalmonFilletsFarm-Raised.webp" alt="" />
+            <h2>$6.50</h2>
+            <h6>Atlantic salmon 200g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/Swaggerty_sFarmAllNaturalMildPremiumSausagePatties.webp" alt="" />
+            <h2>$4.00</h2>
+            <h6>Swaggerty farm Patties 350g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/Swaggerty_sFarmAllNaturalMildPremiumSausageLinks.webp" alt="" />
+            <h2>$4.95</h2>
+            <h6>Swaggerty Farm Sausag 350g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/CatfishFilet.webp" alt="" />
+            <h2>$7.25</h2>
+            <h6>Catfish Filet 300g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/SlicedTopRoundLondonBroil_Package.webp" alt="" />
+            <h2>$9.99</h2>
+            <h6>Sliced Top London Broll 250g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/SlicedPepperoni_Package.webp" alt="" />
+            <h2>$2.10</h2>
+            <h6>Sliced Pepperoni 100g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/SlicedHomestyleTurkeyBreast_Package.webp" alt="" />
+            <h2>$1.95</h2>
+            <h6>Sliced Home Style Turkey 200g</h6>
+          </div>
+          <div class="product">
+            <img src="Latest Product/NorthernHalibutPortions.webp" alt="" />
+            <h2>$6.99</h2>
+            <h6>Northern Halibut 500g</h6>
+          </div>
+        </div>
+      </div>
+
+    <div class="foot1">
+      <div class="foot">
+      <h2>Fast, Free Shipping, Contactless Delivery.</h2>
+      <p>Try it now, risk free!</p>
+      <button type="submit">
+        Shop Now <img src="order.png" alt="" class="order" />
+      </button>
+    </div>
+    </div>
+
+    <div class="last">
+      <div class="left">
+        <p>Copyright © 2020 <span style="font-weight: 600;">RedQ, Inc</span> , All rights reserved</p>
+      </div>
+      <div class="right">
+        <a href="facebook.com"><img src="icon2.png" alt="" class="logo"/></a>
+        <a href="youtube.com"><img src="icon1.png" alt="" class="logo"/></a>
+        <a href="instagram.com"><img src="icon3.png" alt="" class="logo"/></a>
+      </div>
+    </div>
+  </body>
+</html>
